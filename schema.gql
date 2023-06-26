@@ -1,0 +1,12 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Item {
+  id: Float!
+  name: String!
+}
+
+type Query {
+  getItems(id: Float!): [Item!]!
+}
