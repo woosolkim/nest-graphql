@@ -7,6 +7,32 @@ type Item {
   name: String!
 }
 
+type User {
+  """Example field (placeholder)"""
+  seq: Int!
+  name: String!
+  age: Int!
+}
+
 type Query {
   getItems(id: Float!): [Item!]!
+  users: [User!]!
+  user(seq: Int!): User!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(seq: Int!): Boolean!
+}
+
+input CreateUserInput {
+  name: String!
+  age: Int!
+}
+
+input UpdateUserInput {
+  name: String
+  age: Int
+  seq: Int!
 }
